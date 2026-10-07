@@ -12,6 +12,6 @@ The program is divided into two main parts:
 ## 🛠️ Features Implemented
 
 *   Creation of the Singly Linked List of Integers.
-*   Basic operations: Node insertion and deletion (at head and tail).
-*   Retrieval of boundary values (head and tail elements).
+*   Basic operations: Node insertion and deletion.
+*   Retrieval of boundary values.
 *   Display and inspection: (print all elements and count total elements).
