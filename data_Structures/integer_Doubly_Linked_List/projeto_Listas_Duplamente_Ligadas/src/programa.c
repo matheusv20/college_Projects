@@ -6,21 +6,11 @@
 
 int main()
 {
-    ListaDLI * lista1 = criarListaDLI();
+    ListaDLI *lista = criarListaDLI();
 
-    inserirInicioLDLI(6, lista1);
-    inserirInicioLDLI(5, lista1);
-    inserirInicioLDLI(4, lista1);
-    inserirInicioLDLI(3, lista1);
-    inserirInicioLDLI(2, lista1);
-    inserirInicioLDLI(1, lista1);
+    inserirFimSLI(3, lista);
 
-    mostrarListaDLI(lista1);
-
-    removerElementoPosicaoLDLI(5, lista1);
-
-    mostrarListaDLI(lista1);
-
+    mostrarListaDLI(lista);
 
     return 0;
 }
