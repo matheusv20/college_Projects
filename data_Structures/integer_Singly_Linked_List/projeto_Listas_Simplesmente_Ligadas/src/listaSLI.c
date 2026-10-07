@@ -1,7 +1,7 @@
 #include "listaSLI.h"
 
 
-ListaSLI * criarListaSLI()
+ListaSLI *criarListaSLI()
 {
     ListaSLI *nova = (ListaSLI *) malloc(sizeof(ListaSLI));
     nova->tamanho = 0;
