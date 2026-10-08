@@ -496,15 +496,15 @@ ListaSLI * criarCopiaSemRepeticaoLSLI(ListaSLI *pontLista)
 {
     ListaSLI *nova = criarListaSLI();
 
-    NoSLI *aux = pontLista->inicio;
+    NoSLI *pontAux = pontLista->inicio;
 
-    while(aux != NULL)
+    while(pontAux!= NULL)
     {
-        if (!valorExisteLSLI(aux->valor, nova))
+        if (!valorExisteLSLI(pontAux->valor, nova))
         {
-            inserirFimSLI(aux->valor, nova);
+            inserirFimSLI(pontAux->valor, nova);
         }
-        aux = aux->proximo;
+        pontAux = pontAux->proximo;
     }
     return nova;
 
