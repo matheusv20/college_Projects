@@ -5,76 +5,46 @@
 #include "listaSLI.h"
 #include "pilhaI.h"
 
-void mostrarEmBinario();
+void mostrarEmBinario(int valor);
 
 
 int main()
-{
-    PilhaI * pilha = criarPilhaInt();
+{   
+    int numero = 0;
 
-    mostrarPilhaI(pilha);
+    printf("Digite um número: ");
+    scanf("%d", &numero);
+    espaco();
 
-    empilharPilhaI(2, pilha);
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
+    printf("Número em binário: ");
 
-    empilharPilhaI(7, pilha);
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-
-    empilharPilhaI(4, pilha);
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-
-    empilharPilhaI(12, pilha);
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-
-    empilharPilhaI(6, pilha);
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-
-
-    mostrarPilhaI(pilha);
-
-
-    printf("Desempilhou: %d\n", desempilharPilhaI(pilha));
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-    mostrarPilhaI(pilha);
-
-    printf("Desempilhou: %d\n", desempilharPilhaI(pilha));
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-    mostrarPilhaI(pilha);
-
-    printf("Desempilhou: %d\n", desempilharPilhaI(pilha));
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-    mostrarPilhaI(pilha);
-
-    printf("Desempilhou: %d\n", desempilharPilhaI(pilha));
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-    mostrarPilhaI(pilha);
-
-    printf("Desempilhou: %d\n", desempilharPilhaI(pilha));
-    printf("Topo: %d\n\n", obterTopoPilhaI(pilha));
-    mostrarPilhaI(pilha);
-
-
-    printf("Desempilhou: %d\n\n", desempilharPilhaI(pilha));
-
-
-    empilharPilhaI(2, pilha);
-    empilharPilhaI(7, pilha);
-    empilharPilhaI(4, pilha);
-    empilharPilhaI(12, pilha);
-    empilharPilhaI(6, pilha);
-
-    mostrarPilhaI(pilha);
-
-    limparPilhaI(pilha);
-
-    mostrarPilhaI(pilha);
-
-    destruirPilhaI(&pilha);
+    mostrarEmBinario(numero);
 }
 
-void mostrarEmBinario()
+void mostrarEmBinario(int valor)
 {
     PilhaI * pilha = criarPilhaInt();
 
-    while valor 
+    while (valor > 0)
+    {
+        int resto = valor % 2;
+
+        empilharPilhaI(resto, pilha);
+
+        valor = valor/2;
+    }
+
+    while(pilha->tamanho > 0)
+    {
+        printf("%d", obterTopoPilhaI(pilha));
+
+        desempilharPilhaI(pilha);
+    }
+
+    espaco();
+
+    destruirPilhaI(&pilha);
+    printf("\n\nPrograma Finalizado.\n");
+    
+
 }
