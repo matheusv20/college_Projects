@@ -5,7 +5,7 @@ FilaI * criarFilaI()
     FilaI *nova = (FilaI *) malloc(sizeof(FilaI));
     nova->tamanho = 0;
     nova->inicio = NULL;
-    nova->inicio = NULL;
+    nova->fim = NULL;
     return nova;
 }
 
